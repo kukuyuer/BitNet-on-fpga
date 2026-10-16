@@ -1,1 +1,5 @@
-
+包含两个模型文件：
+1、ggml-model-i2_s.gguf  ： BitNet-b1.58-2B-4T 原始模型文件 
+    md5sum：65cb04366e4d02ccd78b4b7b48c84b3b  
+    sha256sum：4221b252fdd5fd25e15847adfeb5ee88886506ba50b8a34548374492884c2162
+2、ggml-model-i2_s.v37p  ： BitNet-b1.58-2B-4T 提取的部分数据文件，由本地python脚本转换生成
