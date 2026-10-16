@@ -1,7 +1,7 @@
 # Usage:
 ## 1、准备模型
 下载官方BitNet-b1.58-2B-4T模型(gguf格式),保存到00_external/models/目录  
-> https://huggingface.co/microsoft/bitnet-b1.58-2B-4T-gguf/tree/main
+> https://huggingface.co/microsoft/bitnet-b1.58-2B-4T-gguf/tree/main  
 使用转换脚本生成辅助模型文件
 > python3 repack_gguf_for_v37.py ggml-model-i2_s.gguf ggml-model-i2_s.v37p
         
