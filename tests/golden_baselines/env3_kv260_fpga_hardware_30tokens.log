@@ -1,0 +1,45 @@
+Linux kria 5.15.0-1020-xilinx-zynqmp #22-Ubuntu SMP Fri Feb 24 14:14:20 UTC 2023 aarch64
+kernel.sched_rt_runtime_us = -1
+
+[MAIN] Initializing llama backend...
+[MAIN] Registering V37 FPGA Backend...
+[MAIN] V37 Backend registered. I2_S MUL_MAT will be handled by V37.
+[MAIN] Loading model (weights will be dispatched to V37)...
+[V37 WARNING] Failed to open /dev/v37, will use fallback MMIO if possible.
+[V37-LOADER] 自定义物理扫描器完成。发现 332 个张量。
+[V37 WARNING] Failed to open /dev/v37, will use fallback MMIO if possible.
+[V37] Engine Initialized.
+[V37PACK] Loaded 210 pre-packed tensors from /home/ubuntu/test_scheme13_v38/00_external/models/ggml-model-i2_s.v37p (496.9 MB)
+[V37-OPT] Starting ONE-TIME full model weight preloading into CMA (Zero-Copy Mode)...
+[V37-OPT] Successfully preloaded all 210 tensors (496.93 MB) into CMA in 803.35 ms!
+[V37-OPT] Zero-Copy CMA stream active: subsequent token generation will have ZERO memcpy overhead.
+[V37-OPT] mlock SUCCESS: Pinned ~705 MB tables and weights in physical RAM!
+[V37-OPT] Hierarchical LM_HEAD quantized tables (Tier1-Fine=32K, Coarse=128K) built in 699.7 ms.
+[V37-OPT] Pre-cached all 30 layers tensor metadata, weights, and norms into flat memory.
+[MAIN] Using pre-packed weights from /home/ubuntu/test_scheme13_v38/00_external/models/ggml-model-i2_s.v37p
+
+[V37 FPGA] BitNet Inference Engine
+PROMPT: The hardware accelerator is (WITH BOS)
+TOKEN_COUNT: 5
+  token[0] = 128000
+  token[1] = 791
+  token[2] = 12035
+  token[3] = 65456
+  token[4] = 374
+MODE: FPGA Accelerated
+THREADS: 4
+N_PREDICT: 30
+REPEAT_PENALTY: 1.10 (last_n=64)
+---
+OUTPUT:  a device that performs specific tasks, such as encryption or decryption, and can be used to speed up the processing of data. This type of processor is~llama_context:        V37 compute buffer size is   2.8438 MiB, matches expectation of   2.8438 MiB
+~llama_context:        CPU compute buffer size is  15.9689 MiB, matches expectation of  15.9689 MiB
+
+
+==== Performance Report ====
+Mode: V37 FPGA
+Prefill:  4 tokens in 357.15 ms (11.20 TPS)
+Decode:   30 tokens in 2.915 sec (97.15 ms/token)
+Speed:    10.29 TPS (Pure Decode), 9.17 TPS (End-to-End)
+Forward:  avg 97.13 ms/token (10.30 TPS)
+============================
+FPGA TIMING: dma=2877 ms (setup=24 ms, poll=2786 ms), memcpy=0 ms, sync_cpu=2 ms, post=52 ms. calls=7140
