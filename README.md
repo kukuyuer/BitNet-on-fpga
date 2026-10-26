@@ -82,7 +82,7 @@ V37_software/
 推理引擎优先使用由专用离线编译器 [`V37_compiler`](file:///mnt/nvme_linux/V37_fpga_upload/V37_compiler) 生成的 **Format v4 统一自包含容器 (`.v37p`)**。该容器内嵌词表与微码，体积体积略小于原始模型：
 
 ```bash
-# 切换至独立编译器仓库构建工具:
+# 切换至独立编译器仓库构建工具(已上传编译后的X64版本):
 cd ../V37_compiler && ./build.sh
 
 # 一键离线编译 GGUF 为 Format v4 自包含硬件容器:
