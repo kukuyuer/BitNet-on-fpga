@@ -19,7 +19,7 @@
 
 ---
 
-## 📂 规范工程目录树
+## 规范工程目录树
 
 ```text
 V37_software/
@@ -155,7 +155,7 @@ sudo chrt -f 99 taskset -c 0-3 ./bin/semantic_engine \
 
 ---
 
-## 📋 命令行参数完整速查表
+##  命令行参数完整速查表
 
 `./bin/semantic_engine` 支持灵活的位置参数与选项标志：
 
@@ -176,7 +176,7 @@ sudo chrt -f 99 taskset -c 0-3 ./bin/semantic_engine \
 
 ---
 
-## 🔍 KV260 硬件就绪状态诊断手册
+##  KV260 硬件就绪状态诊断手册
 
 | 检查项                 | 命令                                                              | 正常状态返回值                                     | 异常说明与排查                                                                       |
 |:---------------------- |:----------------------------------------------------------------- |:-------------------------------------------------- |:------------------------------------------------------------------------------------ |
@@ -193,3 +193,19 @@ sudo chrt -f 99 taskset -c 0-3 ./bin/semantic_engine \
 请参阅 ：
 
 - [ **KV260 板端全模型实测记录与 MD5 校验总表**](docs/test/README.md)
+
+## 已打包模型文件
+
+
+| 模型名称 | 文件名 | 格式版本 / 压缩模式 | 文件大小 (Bytes) | 大小 (MB) | MD5 完整性校验值 |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **BitNet-270M** | `bitnet-270m-unified.v37p` | Format v4 / Mode 6 | 365,462,656 | 348.53 MB | `6a4d443401f396980e84314716f43a1f` |
+| **BitNet-0.6B** | `bitnet-0.6b-unified.v37p` | Format v4 / Mode 6 | 407,348,800 | 388.48 MB | `35d9660b8247c50e4b9185f44e5f40cc` |
+| **BitNet-2B** | `bitnet-2b-unified.v37p` | Format v4 / Mode 6 | 1,090,156,544 | 1039.65 MB | `3827d44451f7edb831545bf4148b6415` |
+| **Falcon3-1B** | `falcon3-1b-unified.v37p` | Format v4 / Mode 6 | 1,308,844,800 | 1248.21 MB | `32b9f7ba8c07a49f23ad06bee5d7e1e8` |
+| **Falcon3-3B** | `falcon3-3b-unified.v37p` | Format v4 / Mode 6 | 2,107,954,112 | 2010.30 MB | `1b17b364e12670b1ea7febcc1b49cbb0` |
+| **Falcon3-7B** | `falcon3-7b-unified.v37p` | Format v4 / Mode 6 | 2,966,996,288 | 2829.55 MB | `d1cb9e5f0d4734be42987a7e58b5511a` |
+| **Falcon3-10B**| `falcon3-10b-unified.v37p`| Format v4 / Mode 6 | 3,546,130,048 | 3381.85 MB | `8045cea3749c78ecc57ca9eedf25ab70` |
+| **Llama3-8B**  | `llama3-8b-unified.v37p`  | Format v4 / Mode 6 | 3,527,971,968 | 3364.54 MB | `3cc9ca33d85100a256351c657bb236b6` |
+
+**阿里云盘： **
